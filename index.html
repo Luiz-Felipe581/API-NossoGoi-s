@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Goiás por dentro — ciência, cultura e tecnologia</title>
+  <meta name="description" content="Mapa interativo com curiosidades de ciência, cultura e tecnologia do estado de Goiás.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2714%27 fill=%27%2314302B%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%276%27 fill=%27%23E0A81A%27/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-mapa">
+  <header class="topo">
+    <a class="marca" href="index.html">Goiás por dentro</a>
+    <nav class="abas" aria-label="Navegação principal">
+      <a href="index.html" class="ativa" aria-current="page">Mapa</a>
+      <a href="equipe.html">Quem fez</a>
+    </nav>
+  </header>
+
+  <main class="palco">
+    <div id="mapa" aria-label="Mapa de Goiás com curiosidades"></div>
+
+    <aside class="painel-filtros" aria-label="Filtrar por tema">
+      <p class="painel-titulo">Passe o mouse ou toque em um ponto para ler a curiosidade.</p>
+      <div class="filtros" id="filtros">
+        <button class="filtro ativo" data-cat="todas">Tudo</button>
+        <button class="filtro" data-cat="ciencia"><i class="ponto c-ciencia"></i>Ciência</button>
+        <button class="filtro" data-cat="cultura"><i class="ponto c-cultura"></i>Cultura</button>
+        <button class="filtro" data-cat="tecnologia"><i class="ponto c-tecnologia"></i>Tecnologia</button>
+      </div>
+      <p class="contagem" id="contagem" aria-live="polite">Carregando curiosidades…</p>
+    </aside>
+
+    <article class="cartao" id="cartao" aria-live="polite" hidden>
+      <button class="fechar" id="fechar" aria-label="Fechar">×</button>
+      <p class="cartao-meta" id="cartao-meta"></p>
+      <h2 id="cartao-titulo"></h2>
+      <p id="cartao-texto"></p>
+    </article>
+
+    <div class="aviso" id="aviso" role="alert" hidden></div>
+    <noscript><p class="aviso">Ative o JavaScript para ver o mapa.</p></noscript>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

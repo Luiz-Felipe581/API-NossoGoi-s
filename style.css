@@ -1,0 +1,88 @@
+:root{
+  --papel:#EAEFE7; --tinta:#14302B; --tinta-2:#4A625C; --linha:#C9D5C8; --branco:#FBFCF9;
+  --ciencia:#2F6FB0; --cultura:#C2417A; --tecnologia:#E0A81A;
+  --fonte-titulo:"Bricolage Grotesque",system-ui,sans-serif;
+  --fonte-texto:"Figtree",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body.page-mapa{height:100dvh}
+body{background:var(--papel);color:var(--tinta);font:400 1rem/1.6 var(--fonte-texto);display:flex;flex-direction:column}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ciencia);outline-offset:2px}
+
+.topo{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.75rem 1.25rem;background:var(--tinta);color:var(--papel);position:relative;z-index:1000}
+.marca{font:700 1.25rem/1 var(--fonte-titulo);text-decoration:none;letter-spacing:-.01em}
+.abas{display:flex;gap:.25rem}
+.abas a{padding:.45rem .9rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;color:#C5D4CC}
+.abas a:hover{color:#fff}
+.abas a.ativa{background:var(--tecnologia);color:var(--tinta);font-weight:600}
+
+/* Mapa */
+.palco{position:relative;flex:1;min-height:0}
+#mapa{position:absolute;inset:0;background:#DCE5DA}
+.leaflet-container{font-family:var(--fonte-texto)}
+.painel-filtros{position:absolute;top:1rem;left:1rem;z-index:500;max-width:19rem;background:var(--branco);border-radius:14px;padding:1rem;box-shadow:0 6px 24px rgba(20,48,43,.18)}
+.painel-titulo{margin:0 0 .75rem;font-size:.9rem;color:var(--tinta-2);line-height:1.45}
+.filtros{display:flex;flex-wrap:wrap;gap:.4rem}
+.filtro{display:inline-flex;align-items:center;gap:.4rem;font:500 .85rem var(--fonte-texto);padding:.4rem .75rem;border:1.5px solid var(--linha);border-radius:999px;background:transparent;color:var(--tinta);cursor:pointer}
+.filtro:hover{border-color:var(--tinta)}
+.filtro.ativo{background:var(--tinta);border-color:var(--tinta);color:var(--papel)}
+.ponto{width:.65rem;height:.65rem;border-radius:50%;display:inline-block}
+.c-ciencia{background:var(--ciencia)}.c-cultura{background:var(--cultura)}.c-tecnologia{background:var(--tecnologia)}.c-outra{background:var(--tinta-2)}
+.contagem{margin:.75rem 0 0;font-size:.8rem;color:var(--tinta-2)}
+
+.pino{width:18px;height:18px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:2.5px solid var(--branco);box-shadow:0 2px 6px rgba(0,0,0,.35);transition:transform .15s}
+.pino.c-ciencia{background:var(--ciencia)}.pino.c-cultura{background:var(--cultura)}.pino.c-tecnologia{background:var(--tecnologia)}.pino.c-outra{background:var(--tinta-2)}
+.leaflet-marker-icon:hover .pino,.leaflet-marker-icon.sel .pino{transform:rotate(-45deg) scale(1.35)}
+.rotulo.leaflet-tooltip{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:8.5rem;background:var(--branco);border:0;border-radius:6px;color:var(--tinta);font:600 .66rem/1.2 var(--fonte-texto);padding:.15rem .4rem;box-shadow:0 2px 8px rgba(20,48,43,.2)}
+.rotulo.leaflet-tooltip::before{display:none}
+
+.agrupa{background:var(--tinta);color:var(--tecnologia);border:3px solid var(--branco);border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.35);font:700 .9rem var(--fonte-titulo);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.cartao{position:absolute;right:1rem;bottom:1.5rem;z-index:600;width:min(24rem,calc(100% - 2rem));background:var(--tinta);color:var(--papel);border-radius:16px;padding:1.25rem 1.25rem 1.4rem;box-shadow:0 10px 36px rgba(20,48,43,.4);border-top:5px solid var(--tinta-2);animation:abre .18s ease-out}
+.cartao[data-cat="ciencia"]{border-top-color:var(--ciencia)}
+.cartao[data-cat="cultura"]{border-top-color:var(--cultura)}
+.cartao[data-cat="tecnologia"]{border-top-color:var(--tecnologia)}
+.cartao[hidden]{display:none}
+@keyframes abre{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.cartao h2{margin:.2rem 1.5rem .6rem 0;font:700 1.45rem/1.15 var(--fonte-titulo);letter-spacing:-.01em}
+.cartao p{margin:0}
+.cartao-meta{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:#B9CCC3}
+#cartao-texto{font-size:.98rem;line-height:1.6;color:#E6EEE9;max-height:38vh;overflow:auto}
+.fechar{position:absolute;top:.6rem;right:.7rem;width:2rem;height:2rem;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:var(--papel);font-size:1.3rem;line-height:1;cursor:pointer}
+.fechar:hover{background:rgba(255,255,255,.25)}
+
+.aviso{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:700;width:min(26rem,calc(100% - 2rem));background:var(--branco);border-left:6px solid var(--cultura);border-radius:10px;padding:1.1rem 1.25rem;box-shadow:0 10px 36px rgba(20,48,43,.3)}
+.aviso[hidden]{display:none}
+.aviso h3{margin:0 0 .4rem;font:700 1.1rem var(--fonte-titulo)}
+.aviso p{margin:0 0 .75rem;font-size:.92rem;color:var(--tinta-2)}
+.aviso button{font:600 .9rem var(--fonte-texto);padding:.5rem 1rem;border:0;border-radius:8px;background:var(--tinta);color:var(--papel);cursor:pointer}
+.aviso code{background:var(--papel);padding:.05rem .35rem;border-radius:4px}
+
+/* Equipe */
+.page-equipe{display:block;height:auto;min-height:100%}
+.folha{max-width:44rem;margin:0 auto;padding:3rem 1.25rem 4rem}
+.folha h1{font:700 clamp(2rem,6vw,3.2rem)/1.05 var(--fonte-titulo);letter-spacing:-.025em;margin:0 0 2.5rem;text-wrap:balance}
+.bloco{margin-bottom:2.5rem}
+.bloco h2{font:700 1.3rem var(--fonte-titulo);margin:0 0 1rem}
+.bloco p{max-width:38rem;margin:0 0 1rem;color:var(--tinta)}
+.equipe{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--tinta)}
+.equipe li{display:flex;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--linha)}
+.equipe strong{font-weight:600}
+.equipe span{color:var(--tinta-2);text-align:right}
+.nota{font-size:.88rem;color:var(--tinta-2)!important;margin-top:1rem!important}
+.carta{background:var(--branco);border-radius:16px;padding:1.75rem 1.5rem;border-left:6px solid var(--tecnologia)}
+.assinatura{margin-top:1.5rem!important}
+.voltar a{font-weight:600;text-underline-offset:.25em}
+.rodape{padding:1.5rem 1.25rem 2rem;text-align:center;font-size:.85rem;color:var(--tinta-2);border-top:1px solid var(--linha)}
+
+@media (max-width:640px){
+  .topo{padding:.65rem .9rem}.marca{font-size:1.05rem}
+  .abas a{padding:.4rem .7rem;font-size:.88rem}
+  .painel-filtros{top:.6rem;left:.6rem;right:.6rem;max-width:none;padding:.75rem}
+  .painel-titulo{display:none}
+  .contagem{margin-top:.5rem}
+  .cartao{right:.6rem;bottom:.8rem;width:calc(100% - 1.2rem)}
+  .equipe li{flex-direction:column;gap:.1rem}.equipe span{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
