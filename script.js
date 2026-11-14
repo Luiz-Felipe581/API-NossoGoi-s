@@ -1,5 +1,7 @@
 // ===== Configuração =====
-const API_URL = "http://localhost:3000/api/curiosidades";
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:3000/api/curiosidades'
+  : 'https://api-nossogoias.onrender.com';
 const CENTRO_GOIAS = [-15.95, -49.6];
 const IBGE_GOIAS = "https://servicodados.ibge.gov.br/api/v3/malhas/estados/52?formato=application/vnd.geo+json";
 
