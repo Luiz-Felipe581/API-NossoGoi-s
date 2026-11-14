@@ -123,19 +123,28 @@ L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map
   maxZoom: 13
 }).addTo(mapa);
 
-fetch(IBGE_GOIAS).then(r => r.json()).then(geo => {
-  // Escurece levemente tudo que está fora de Goiás, para o estado ganhar destaque
-  const geom = (geo.features ? geo.features[0].geometry : (geo.geometry || geo));
-  const poligonos = geom.type === "Polygon" ? [geom.coordinates] : geom.coordinates;
-  const buracos = poligonos.map(p => L.GeoJSON.coordsToLatLngs(p[0], 0));
-  const mundo = [[-89, -180], [-89, 180], [89, 180], [89, -180]];
-  L.polygon([mundo, ...buracos], { stroke: false, fillColor: "#14302B", fillOpacity: .35, interactive: false }).addTo(mapa);
+fetch(IBGE_GOIAS)
+  .then(r => r.json())
+  .then(geo => {
+    // Escurece levemente tudo que está fora de Goiás, para o estado ganhar destaque
+    const geom = (geo.features ? geo.features[0].geometry : (geo.geometry || geo));
+    const poligonos = geom.type === "Polygon" ? [geom.coordinates] : geom.coordinates;
+    const buracos = poligonos.map(p => L.GeoJSON.coordsToLatLngs(p[0], 0));
+    const mundo = [[-89, -180], [-89, 180], [89, 180], [89, -180]];
+    L.polygon([mundo, ...buracos], { stroke: false, fillColor: "#14302B", fillOpacity: .35, interactive: false }).addTo(map);
+    
+    const contorno = L.geoJSON(geo, { style: { color: "#14302B", weight: 3, fill: false }, interactive: false }).addTo(map);
+    const limites = contorno.getBounds();
+    map.fitBounds(limites, { padding: [30, 30] });
+    map.setMaxBounds(limites.pad(0.6));
 
-  const contorno = L.geoJSON(geo, { style: { color: "#14302B", weight: 3, fill: false }, interactive: false }).addTo(mapa);
-  const limites = contorno.getBounds();
-  mapa.fitBounds(limites, { padding: [30, 30] });
-  mapa.setMaxBounds(limites.pad(0.6));
-}).catch(() => {}); // sem o contorno o mapa continua funcionando // sem o contorno o mapa continua funcionando
+    // Garante que o Leaflet recalcule o tamanho correto no celular
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 250);
+
+  })
+  .catch(err => console.error("Erro ao carregar o contorno do IBGE:", err));
 
 // ===== Cartão de descrição =====
 const cartao = $("cartao");
