@@ -129,18 +129,18 @@ fetch(IBGE_GOIAS)
     // Escurece levemente tudo que está fora de Goiás, para o estado ganhar destaque
     const geom = (geo.features ? geo.features[0].geometry : (geo.geometry || geo));
     const poligonos = geom.type === "Polygon" ? [geom.coordinates] : geom.coordinates;
-    const buracos = poligonos.map(p => L.GeoJSON.coordsToLatLngs(p[0], 0));
+    const buracos = poligonos.mapa(p => L.GeoJSON.coordsToLatLngs(p[0], 0));
     const mundo = [[-89, -180], [-89, 180], [89, 180], [89, -180]];
-    L.polygon([mundo, ...buracos], { stroke: false, fillColor: "#14302B", fillOpacity: .35, interactive: false }).addTo(map);
+    L.polygon([mundo, ...buracos], { stroke: false, fillColor: "#14302B", fillOpacity: .35, interactive: false }).addTo(mapa);
     
-    const contorno = L.geoJSON(geo, { style: { color: "#14302B", weight: 3, fill: false }, interactive: false }).addTo(map);
+    const contorno = L.geoJSON(geo, { style: { color: "#14302B", weight: 3, fill: false }, interactive: false }).addTo(mapa);
     const limites = contorno.getBounds();
-    map.fitBounds(limites, { padding: [30, 30] });
-    map.setMaxBounds(limites.pad(0.6));
+    mapa.fitBounds(limites, { padding: [30, 30] });
+    mapa.setMaxBounds(limites.pad(0.6));
 
     // Garante que o Leaflet recalcule o tamanho correto no celular
     setTimeout(() => {
-      map.invalidateSize();
+      mapa.invalidateSize();
     }, 250);
 
   })
