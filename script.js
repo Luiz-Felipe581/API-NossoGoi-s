@@ -129,7 +129,7 @@ fetch(IBGE_GOIAS)
     // Escurece levemente tudo que está fora de Goiás, para o estado ganhar destaque
     const geom = (geo.features ? geo.features[0].geometry : (geo.geometry || geo));
     const poligonos = geom.type === "Polygon" ? [geom.coordinates] : geom.coordinates;
-    const buracos = poligonos.mapa(p => L.GeoJSON.coordsToLatLngs(p[0], 0));
+    const buracos = poligonos.map(p => L.GeoJSON.coordsToLatLngs(p[0], 0));
     const mundo = [[-89, -180], [-89, 180], [89, 180], [89, -180]];
     L.polygon([mundo, ...buracos], { stroke: false, fillColor: "#14302B", fillOpacity: .35, interactive: false }).addTo(mapa);
     
