@@ -290,6 +290,186 @@ const curiosidades = [
     categoria: "Tecnologia",
     titulo: "Hub Goiás e o ecossistema de startups",
     descricao: "O Hub Goiás leva inovação ao agro e a diversos setores, reunindo startups com soluções que vão desde Agrotech puro até ferramentas de transformação digital, Fintechs e EdTechs. O ecossistema goiano de inovação tem se consolidado como um dos mais dinâmicos do país.[reference:19]"
+  },
+  {
+    id: 46,
+    categoria: "Ciência",
+    titulo: "Geologia pré-cambriana de Trindade",
+    descricao: "A região de Trindade está assentada sobre o Complexo Gabro-Gnaisse Piroxênico, composto por rochas neoproterozoicas ricas em piroxênio e anfibólio. Esse embasamento geológico preserva informações valiosas sobre as antigas atividades tectônicas e metamórficas que formaram o território goiano."
+  },
+  {
+    id: 47,
+    categoria: "Ciência",
+    titulo: "Clima tropical com veranicos",
+    descricao: "Trindade possui clima tropical subúmido (Aw), com duas estações bem definidas: chuvas intensas de outubro a março e seca de abril a setembro. Entre janeiro e fevereiro, é comum a ocorrência de 'veranicos' (pequenas estiagens), que exigem atenção redobrada da agricultura local."
+  },
+  {
+    id: 48,
+    categoria: "Ciência",
+    titulo: "Serra da Taboca: o ponto mais alto",
+    descricao: "O relevo de Trindade é classificado como suave ondulado, com altitude média de 754 metros. O ponto mais alto do município é a Serra da Taboca, atingindo 910 metros, enquanto a altitude mínima está no leito do Rio Barro Branco, com 590 metros."
+  },
+  {
+    id: 49,
+    categoria: "Ciência",
+    titulo: "Hidrografia da Bacia do Rio dos Bois",
+    descricao: "O abastecimento de água de Trindade depende do Ribeirão Arrozal, inserido na sub-bacia do Rio do Peixe. Pesquisadores monitoram constantemente os impactos da impermeabilização do solo urbano sobre esse manancial, buscando alternativas para garantir a segurança hídrica do município."
+  },
+  {
+    id: 50,
+    categoria: "Ciência",
+    titulo: "Fitofisionomias do Cerrado em Trindade",
+    descricao: "A vegetação local está totalmente inserida no bioma Cerrado, variando de campos limpos a formações de cerradão. Espécies arbóreas como o ipê e o jatobá são marcantes na região, e o bioma abriga cerca de 10% de todas as espécies animais e vegetais do planeta."
+  },
+  {
+    id: 51,
+    categoria: "Ciência",
+    titulo: "Pesquisas arqueológicas do IF Goiano",
+    descricao: "Pesquisadores do Instituto Federal Goiano (Campus Trindade e região) realizam estudos sobre a conservação do solo, recuperação de áreas degradadas e sustentabilidade no Cerrado, gerando dados científicos vitais para a mitigação dos impactos ambientais da expansão urbana."
+  },
+  {
+    id: 52,
+    categoria: "Ciência",
+    titulo: "Estudos sobre o Rio Barro Branco",
+    descricao: "Cientistas da região metropolitana de Goiânia estudam a qualidade da água do Rio Barro Branco, que corta Trindade. Essas análises buscam identificar a presença de poluentes, metais pesados e avaliar a saúde do ecossistema aquático para orientar políticas de saneamento."
+  },
+  {
+    id: 53,
+    categoria: "Ciência",
+    titulo: "Observação de aves no Cerrado trindadense",
+    descricao: "Apesar da urbanização, áreas remanescentes de Cerrado em Trindade e arredores atraem observadores de aves e biólogos. Espécies como a arara-canindé e o tucano-toco são monitoradas por pesquisadores que estudam a adaptação da fauna à pressão antrópica (humana)."
+  },
+  {
+    id: 54,
+    categoria: "Ciência",
+    titulo: "Manejo de resíduos sólidos e biogás",
+    descricao: "O aterro sanitário de Trindade é objeto de estudos ambientais devido ao seu potencial de aproveitamento energético. Cientistas avaliam a emissão de gases de efeito estufa (metano) e o potencial de geração de energia elétrica a partir da decomposição dos resíduos urbanos."
+  },
+  {
+    id: 55,
+    categoria: "Ciência",
+    titulo: "Recarga de aquíferos na região",
+    descricao: "Estudos geológicos investigam a capacidade de recarga dos aquíferos subterrâneos na região de Trindade, fundamentais para a segurança hídrica. A qualidade das águas subterrâneas é analisada por instituições como a UFG e o IFG para evitar a contaminação por agrotóxicos e efluentes."
+  },
+  {
+    id: 56,
+    categoria: "Cultura",
+    titulo: "Origem da Romaria do Divino Pai Eterno",
+    descricao: "Por volta de 1840, o casal Constantino Xavier e Ana Rosa encontrou um medalhão de barro com a imagem da Santíssima Trindade em sua propriedade (antigo arraial de Barro Preto). A partir desse achado, vizinhos começaram a se reunir para rezar, dando origem à maior romaria do Centro-Oeste."
+  },
+  {
+    id: 57,
+    categoria: "Cultura",
+    titulo: "Festa do Divino Pai Eterno e os 3 milhões de fiéis",
+    descricao: "A festa ocorre no primeiro domingo de julho e dura cerca de dez dias. Estima-se que mais de 3 milhões de peregrinos passem pela cidade nesse período, transformando a pacata Trindade em um dos maiores centros de peregrinação religiosa do Brasil."
+  },
+  {
+    id: 58,
+    categoria: "Cultura",
+    titulo: "Romaria dos Carros de Boi",
+    descricao: "Reconhecido pelo IPHAN em 2018 como Patrimônio Cultural do Brasil, o desfile de carros de boi ocorre na quinta-feira da semana da festa. Carreiros de todo o estado desfilam com veículos enfeitados, mantendo viva a tradição rural e durando mais de quatro horas."
+  },
+  {
+    id: 59,
+    categoria: "Cultura",
+    titulo: "Comunidade cigana de Trindade",
+    descricao: "A cidade abriga cerca de 2.000 famílias ciganas, com forte tradição na fabricação e venda de enxovais. Essa comunidade é tão significativa que Trindade possui bairros com características ciganas, escolas com atendimento diferenciado e políticas públicas específicas."
+  },
+  {
+    id: 60,
+    categoria: "Cultura",
+    titulo: "Basílica do Divino Pai Eterno",
+    descricao: "Trindade abriga a única basílica do mundo dedicada exclusivamente ao Divino Pai Eterno. A igreja matriz foi construída em 1912 pelos padres redentoristas e tombada como Patrimônio Histórico e Artístico Nacional em 2012."
+  },
+  {
+    id: 61,
+    categoria: "Cultura",
+    titulo: "A famosa 'Rodovia dos Romeiros'",
+    descricao: "A GO-060, que liga Goiânia a Trindade, tem 18 km de extensão e é mundialmente conhecida como Rodovia dos Romeiros. Durante a festa, milhares de fiéis percorrem o trajeto a pé, de bicicleta ou até mesmo de joelhos, pagando promessas."
+  },
+  {
+    id: 62,
+    categoria: "Cultura",
+    titulo: "Procissão Luminosa",
+    descricao: "Um dos momentos mais emocionantes da festa, a Procissão Luminosa ocorre à noite. Milhares de fiéis caminham com velas acesas pelas ruas da cidade, criando um espetáculo visual de fé e devoção que ilumina o trajeto até o santuário."
+  },
+  {
+    id: 63,
+    categoria: "Cultura",
+    titulo: "Gastronomia: Empadão e Pamonha",
+    descricao: "Durante a romaria, a culinária goiana brilha. O empadão goiano (com frango, carne, queijo e às vezes pequi) e a pamonha (feita do milho colhido na região) são as grandes estrelas das barracas e restaurantes, alimentando os milhões de romeiros."
+  },
+  {
+    id: 64,
+    categoria: "Cultura",
+    titulo: "Carroças de Som na Romaria",
+    descricao: "Uma inovação cultural curiosa: carreiros passaram a instalar caixas de som movidas a bateria em seus carros de boi para tocar forró e modas sertanejas durante o descanso. As 'carroças automotivas' rapidamente se tornaram uma nova marca da festa."
+  },
+  {
+    id: 65,
+    categoria: "Cultura",
+    titulo: "Primeira escola de Trindade",
+    descricao: "A primeira escola pública do município, a 'Eschola Mista de Trindade', foi fundada em 1905, com 23 alunas e 35 alunos. Os padres redentoristas tiveram papel crucial na educação local, doando salas e ajudando a criar o Jardim de Infância Menino Jesus em 1956."
+  },
+  {
+    id: 66,
+    categoria: "Tecnologia",
+    titulo: "IF Goiano Campus Trindade",
+    descricao: "Inaugurado em 2015, o campus oferece cursos técnicos em Automação Industrial, Informática para Internet, Edificações e Eletrotécnica, além de Engenharias. A instituição é um celeiro de formação tecnológica e inovação para toda a região."
+  },
+  {
+    id: 67,
+    categoria: "Tecnologia",
+    titulo: "Aterro Sanitário com geração de energia",
+    descricao: "O aterro de Trindade foi projetado como um complexo de valorização energética. O biogás da decomposição do lixo será usado para gerar energia, e uma usina fotovoltaica será instalada em uma célula encerrada, gerando créditos de carbono."
+  },
+  {
+    id: 68,
+    categoria: "Tecnologia",
+    titulo: "Modernização do Hospital Estadual (Hetrin)",
+    descricao: "O Hospital Estadual de Trindade passou por um investimento massivo de cerca de R$ 50 milhões. A modernização tecnológica inclui a ampliação de leitos, novos equipamentos de exames e triplicação da capacidade de atendimento de urgência e emergência."
+  },
+  {
+    id: 69,
+    categoria: "Tecnologia",
+    titulo: "Projeto de viadutos na GO-060",
+    descricao: "Para melhorar a mobilidade e a segurança entre Trindade e Goiânia, o governo planejou a construção de dois viadutos na GO-060. As obras visam otimizar o tráfego intenso da Rodovia dos Romeiros, que fica saturada durante as festividades."
+  },
+  {
+    id: 70,
+    categoria: "Tecnologia",
+    titulo: "Sistemas de som em carroças de boi",
+    descricao: "A tecnologia sonora também chegou ao campo. Carreiros de Trindade adaptam caixas de som residenciais movidas a baterias automotivas em seus carros de boi, levando o som do forró e da viola para o percurso da romaria de forma autônoma."
+  },
+  {
+    id: 71,
+    categoria: "Tecnologia",
+    titulo: "Digitalização de acervos do Santuário",
+    descricao: "O Santuário do Divino Pai Eterno tem investido em tecnologia de digitalização para preservar a memória da romaria. Documentos históricos, fotografias antigas e relatos de fiéis estão sendo armazenados em nuvem para garantir a preservação para as próximas gerações."
+  },
+  {
+    id: 72,
+    categoria: "Tecnologia",
+    titulo: "Aplicativos para romeiros",
+    descricao: "A expansão tecnológica na região metropolitana trouxe aplicativos de transporte e serviços para Trindade. Durante a festa, romeiros utilizam plataformas digitais para localizar hospedagens, pontos de alimentação, horários das missas e até serviços de saúde de emergência."
+  },
+  {
+    id: 73,
+    categoria: "Tecnologia",
+    titulo: "Gestão inteligente de resíduos",
+    descricao: "A prefeitura e empresas parceiras têm adotado softwares para otimizar a rota dos caminhões de lixo em Trindade, além de usar a tecnologia para mapear e permitir a reciclagem, aumentando a eficiência e reduzindo custos na limpeza urbana."
+  },
+  {
+    id: 74,
+    categoria: "Tecnologia",
+    titulo: "Infraestrutura de redes de internet",
+    descricao: "Com o crescimento populacional acelerado (mais de 130 mil habitantes), Trindade tem recebido investimentos em fibra óptica e redes 5G. Operadoras de telecomunicações instalam novas torres para atender a demanda da região metropolitana e do polo educacional."
+  },
+  {
+    id: 75,
+    categoria: "Tecnologia",
+    titulo: "Monitoramento de tráfego na Rodovia dos Romeiros",
+    descricao: "Durante o período da Romaria, a GO-060 passa a ser monitorada por câmeras de segurança e sistemas de análise de fluxo (tecnologia de *smart traffic*). Esses dados são usados pelos órgãos de trânsito para desviar rotas e evitar congestionamentos extremos."
   }
 ];
 
